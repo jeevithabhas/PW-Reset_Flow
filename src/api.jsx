@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Replace the baseURL with your deployed backend URL
+
 const API = axios.create({
   baseURL: "https://pw-reset-b.onrender.com/api/auth",
 });

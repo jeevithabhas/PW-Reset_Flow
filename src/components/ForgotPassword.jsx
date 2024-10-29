@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { forgotPassword } from "../api"; // Ensure this is pointing to the correct file
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { forgotPassword } from "../api"; 
+import { Link } from "react-router-dom"; 
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -10,9 +10,6 @@ const ForgotPassword = () => {
     try {
       const response = await forgotPassword(email);
       alert(response.data.message);
-      // After sending the reset link, you can navigate to the reset password page
-      // Optionally, you can uncomment the line below to redirect after submission
-      // window.location.href = `/reset-password/${token}`; // You will need to get the token from the response
     } catch (error) {
       alert(error.response.data.message || "Something went wrong");
     }
